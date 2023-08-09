@@ -1,0 +1,22 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Amount (exc. VAT)</th>
+				<th>Amount (inc. VAT)</th>
+				<th>VAT rate</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for record in monetaryValues %}
+				<tr>
+					<td>{{ record.excludingVat }}</td>
+					<td>{{ record.includingVat }}</td>
+					<td>{{ record.vatRate }}%</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

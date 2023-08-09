@@ -1,0 +1,19 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+	{{ form_start(form) }}
+	<div class="form-group">
+		<label for="amount">Monetary Amount</label>
+		{{form_widget(form.originalAmount)}}
+	</div>
+	<div class="form-group">
+		<label for="vat_rate">VAT Rate</label>
+		{{form_widget(form.vatRate)}}
+	</div>
+	<div class="form-group">
+		<label class="form-check-label" for="vat_status">Check me out</label>
+		{{form_widget(form.vatStatus)}}
+	</div>
+	{{form_widget(form.save)}}
+	{{ form_end(form) }}
+{% endblock %}
