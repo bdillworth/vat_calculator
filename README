@@ -1,0 +1,7 @@
+- \App\Repository\MonetaryValueRepository.php
+- \App\Entity\MonetaryValue.php
+- \App\Controller\MonetaryValueController.php
+- \App\Form\MonetaryValueType.php
+- \App\templates\vat_calculator\*
+
+All functions are available from the Header

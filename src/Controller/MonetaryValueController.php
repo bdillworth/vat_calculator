@@ -61,7 +61,6 @@ class MonetaryValueController extends AbstractController
   public function history(): Response
   {
     $monetaryValues = $this->monetaryValueRepository->findAll();
-    //dd($monetaryValues);
 
     return $this->render('vat_calculator/history.html.twig', [
       'monetaryValues' => $monetaryValues

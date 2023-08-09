@@ -5,7 +5,7 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
@@ -14,21 +14,23 @@ class MonetaryValueType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('originalAmount', TextType::class, [
+            ->add('originalAmount', NumberType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'placeholder' => 'Enter Monetary Amount',
                     'id' => '',
-                    'required'
-                )
+                    'required',
+                ),
+                'html5' => true
             ])
-            ->add('vatRate', TextType::class, [
+            ->add('vatRate', NumberType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'placeholder' => 'Enter VAT Rate',
                     'id' => '',
                     'required'
-                )
+                ),
+                'html5' => true
             ])
             ->add('vatStatus', ChoiceType::class, [
                 'attr' => array(
